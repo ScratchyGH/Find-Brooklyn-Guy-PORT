@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMLWiki Ported Games Chooser</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+background: #000;
+color: #fff;
+font-family: 'Oswald', Arial, sans-serif;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 28px;
+}
+.btn-wrap {
+position: relative;
+width: 280px;
+clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+background: #fff;
+padding: 2.5px;
+transition: background 0.15s;
+}
+.btn-wrap:hover {
+background: #fff;
+}
+.btn-inner {
+display: block;
+clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+background: #000;
+color: #fff;
+font-family: 'Oswald', Arial, sans-serif;
+font-size: 18px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+padding: 15px 0;
+transition: background 0.15s, color 0.15s;
+cursor: pointer;
+}
+.btn-wrap:hover .btn-inner {
+background: #fff;
+color: #000;
+}
+.group {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+</style>
+</head>
+<body>
+<div class="group">
+<img src="https://i.ibb.co/G3Tz4yZR/SMLWiki.webp" alt="SMLWiki" style="width:320px; margin-bottom:10px; display:block;">
+<div class="btn-wrap">
+<a class="btn-inner" href="/house.html">House</a>
+</div>
+</div>
+<div class="group">
+<div class="btn-wrap">
+<a class="btn-inner" href="/fbg.html">Find Brooklyn Guy</a>
+</div>
+</div>
+</body>
+</html>
