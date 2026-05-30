@@ -102,8 +102,8 @@ pointer-events:none;
 <body>
 <div id="loadscreen">
 <div class="load-inner">
-<div class="load-title">Ported By Sylex</div>
-<div class="load-sub">Ported using Wayback Machine Saved Assets.</div>
+<div class="load-title">Find Brooklyn Guy</div>
+<div class="load-sub">Ported by Sylex.</div>
 <div class="load-bar-wrap"><div class="load-bar"></div></div>
 </div>
 </div>
@@ -243,6 +243,7 @@ z-index:5;
 #cursorcustom4 {
 position:absolute;pointer-events:none;
 transform:translate(-50%,-50%);z-index:10;
+width:120px;filter:none!important;
 }
 #lvlp4 {
 position:absolute; right:43px; top:6px; text-align:end; z-index:6;
@@ -264,19 +265,7 @@ filter:none !important;
 </div>
 </div>
 <div class="choostext4" id="textSpan4">choose...</div>
-<div id="cursorcustom4" style="left:320px;top:211px;display:none;">
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" style="filter:none!important;display:block;">
-<g fill="#f5d08a" stroke="#2a1a00" stroke-width="1.5">
-<rect x="18" y="24" width="8" height="16" rx="2"/>
-<rect x="10" y="20" width="8" height="18" rx="2"/>
-<rect x="26" y="22" width="8" height="14" rx="2"/>
-<rect x="34" y="24" width="7" height="12" rx="2"/>
-<path d="M18 26 C18 20 10 18 10 20" fill="none"/>
-<ellipse cx="14" cy="16" rx="5" ry="6"/>
-<rect x="9" y="20" width="10" height="4" rx="1"/>
-</g>
-</svg>
-</div>
+<img id="cursorcustom4" src="https://i.ibb.co/B54Lg5bM/gun.png" style="left:320px;top:211px;display:none;">
 </div>
 <div class="scene" id="scene5">
 <style>
@@ -566,8 +555,10 @@ setTimeout(function(){ lvl4.style.pointerEvents='auto'; }, 1024);
 function onMove4(e){
 var r=document.getElementById('gamecanvas').getBoundingClientRect();
 var sc=r.width/GAME_W;
-c4.style.left=((e.clientX-r.left)/sc)+'px';
-c4.style.top=((e.clientY-r.top)/sc)+'px';
+var gx=(e.clientX-r.left)/sc;
+var gy=(e.clientY-r.top)/sc;
+c4.style.left=(gx+153)+'px';
+c4.style.top=(gy*0.4+343)+'px';
 }
 document.addEventListener('mousemove',onMove4);
 window._onMove4=onMove4;
@@ -634,8 +625,8 @@ document.getElementById('bchar').classList.add('visible');
 initScene(0);
 }
 if(document.readyState==='loading'){
-document.addEventListener('DOMContentLoaded',function(){setTimeout(bootGame,100);});
+document.addEventListener('DOMContentLoaded',function(){setTimeout(bootGame,3000);});
 }else{
-setTimeout(bootGame,100);
+setTimeout(bootGame,3000);
 }
 </script>
